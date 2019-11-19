@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>03 - Apache Camel 系列文章 -- 使用场景 | 爱减肥的阿文</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="注：本节内容因为属于概念的问题，基本都是来自网上摘抄，非本人原创，如有侵权，请联系我删除。 下面列列举一些Camel的使用场景： 1. 消息汇聚比如你有来自不同服务器的消息，有ActiveMQ，RabbitMQ，WebService等，你想把它们都存储到日志文件中，那么可以定义如下规则。 12345678new RouteBuilder() &amp;#123;    @Override    publi">
+<meta property="og:type" content="article">
+<meta property="og:title" content="03 - Apache Camel 系列文章 -- 使用场景">
+<meta property="og:url" content="https:&#x2F;&#x2F;awenshizheyu.github.io&#x2F;miracle&#x2F;2019&#x2F;11&#x2F;19&#x2F;Apache%20Camel%20%E7%B3%BB%E5%88%97%E6%96%87%E7%AB%A0-03-%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF&#x2F;index.html">
+<meta property="og:site_name" content="爱减肥的阿文">
+<meta property="og:description" content="注：本节内容因为属于概念的问题，基本都是来自网上摘抄，非本人原创，如有侵权，请联系我删除。 下面列列举一些Camel的使用场景： 1. 消息汇聚比如你有来自不同服务器的消息，有ActiveMQ，RabbitMQ，WebService等，你想把它们都存储到日志文件中，那么可以定义如下规则。 12345678new RouteBuilder() &amp;#123;    @Override    publi">
+<meta property="og:locale" content="zh">
+<meta property="og:updated_time" content="2019-11-19T05:57:58.000Z">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/miracle/atom.xml" title="爱减肥的阿文" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/miracle/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/miracle/" id="logo">爱减肥的阿文</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/miracle/">Home</a>
+        
+          <a class="main-nav-link" href="/miracle/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/miracle/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://awenshizheyu.github.io/miracle"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Apache Camel 系列文章-03-使用场景" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/miracle/2019/11/19/Apache%20Camel%20%E7%B3%BB%E5%88%97%E6%96%87%E7%AB%A0-03-%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF/" class="article-date">
+  <time datetime="2019-11-19T05:57:58.000Z" itemprop="datePublished">2019-11-19</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/miracle/categories/Apache-Camel-%E7%B3%BB%E5%88%97%E6%96%87%E7%AB%A0/">Apache Camel 系列文章</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      03 - Apache Camel 系列文章 -- 使用场景
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>注：本节内容因为属于概念的问题，基本都是来自网上摘抄，非本人原创，如有侵权，请联系我删除。</p>
+<p>下面列列举一些Camel的使用场景：</p>
+<h2 id="1-消息汇聚"><a href="#1-消息汇聚" class="headerlink" title="1. 消息汇聚"></a>1. 消息汇聚</h2><p>比如你有来自不同服务器的消息，有ActiveMQ，RabbitMQ，WebService等，你想把它们都存储到日志文件中，那么可以定义如下规则。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">new RouteBuilder() &#123;</span><br><span class="line">    @Override</span><br><span class="line">    public void configure() throws Exception &#123;</span><br><span class="line">        from(&quot;amqp:queue:incoming&quot;).to(&quot;log:com.mycompany.log?level=DEBUG&quot;);</span><br><span class="line">        from(&quot;rabbitmq://localhost/A/routingKey=B&quot;).to(&quot;log:com.mycompany.log?level=DEBUG&quot;);</span><br><span class="line">        from(&quot;jetty:http://localhost:8080/myapp/myservice&quot;).to(&quot;log:com.mycompany.log?level=DEBUG&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>from表示从这个endpoing取消息，to表示将消息发往这个endpoint，endpoint是消息地址，包含协议类型以及url。 </p>
+<h2 id="2-消息分发"><a href="#2-消息分发" class="headerlink" title="2. 消息分发"></a>2. 消息分发</h2><p>分为两种，顺序分发和并行分发。<br>顺序分发时，消息会先到到第一个endpoing，第一个endpoint处理完成后，再分发到下下个endpoint。如果第一个endpoing处理出现故障，那么消息不会被传到第二个endpoint。比如有如下规则:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">from(&quot;amqp:queue:order&quot;).to(&quot;uri:validateBean&quot;, &quot;uri:handleBean&quot;, &quot;uri:emailBean&quot;);</span><br></pre></td></tr></table></figure>
+<p>这个规则是从order队列中取订单信息，然后依次验证订单，处理订单，并发送邮件通知用户。任何一个步骤出错，下一个步骤将不回执行。<br>并行分发是将得到的消息同时发送到不同的endpoint，没有先后顺序之分，各个endpoint处理消息也是独立的。如果将以上路由改成:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">from(&quot;amqp:queue:order&quot;).multicast().to(&quot;uri:validateBean&quot;, &quot;uri:handleBean&quot;, &quot;uri:emailBean&quot;);</span><br></pre></td></tr></table></figure>
+<p>那么消息就会同时发到to所对应的endpoint。</p>
+<h2 id="3-消息转换"><a href="#3-消息转换" class="headerlink" title="3. 消息转换"></a>3. 消息转换</h2><p>比如想将xml数据转换成json数据，可以使用如下规则。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">from(&quot;amqp:queue:order&quot;).process(new XmlToJsonProcessor()).to(&quot;bean:orderHandler&quot;);</span><br></pre></td></tr></table></figure>
+<p>其中XmlToJsonProcessor是自定义的类，继承org.apache.camel.Processor，用于将xml数据转换成json。</p>
+<h2 id="4-规则引擎"><a href="#4-规则引擎" class="headerlink" title="4. 规则引擎"></a>4. 规则引擎</h2><p>你可以使用Spring Xml, Groovy这类DSL来定义route，这样无需修改代码，就能达到修改业务逻辑的目的。<br>例如上边的规则，</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">from(&quot;amqp:queue:order&quot;).to(&quot;uri:validateBean&quot;, &quot;uri:handleBean&quot;, &quot;uri:emailBean&quot;);</span><br></pre></td></tr></table></figure>
+<p>使用Spring Xml定义如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;route&gt;</span><br><span class="line">        &lt;from uri=&quot;amqp:queue:order&quot;/&gt;</span><br><span class="line">        &lt;multicast&gt;</span><br><span class="line">            &lt;to uri=&quot;uri:validateBean&quot;/&gt;</span><br><span class="line">            &lt;to uri=&quot;uri:handleBean&quot;/&gt;</span><br><span class="line">            &lt;to uri=&quot;uri:emailBean&quot;/&gt;</span><br><span class="line">        &lt;/multicast&gt;</span><br><span class="line">&lt;/route&gt;</span><br></pre></td></tr></table></figure>
+
+<p>如果需要在处理完订单后添加日志，可以改称如下规则</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;route&gt;</span><br><span class="line">        &lt;from uri=&quot;amqp:queue:order&quot;/&gt;</span><br><span class="line">        &lt;multicast&gt;</span><br><span class="line">            &lt;to uri=&quot;uri:validateBean&quot;/&gt;</span><br><span class="line">            &lt;to uri=&quot;uri:handleBean&quot;/&gt;</span><br><span class="line">            &lt;to uri=&quot;log:com.mycompany.log?level=INFO&quot;/&gt;</span><br><span class="line">            &lt;to uri=&quot;uri:emailBean&quot;/&gt;</span><br><span class="line">        &lt;/multicast&gt;</span><br><span class="line">&lt;/route&gt;</span><br></pre></td></tr></table></figure>
+<p>另外camel提供了大量的内置Processor，用于逻辑运算，过滤等，这样更加容易定移除灵活的route，例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">from(&quot;amqp:queue:order&quot;)</span><br><span class="line">    .filter(header(&quot;foo&quot;).isEqualTo(&quot;bar&quot;))</span><br><span class="line">    .choice()</span><br><span class="line">    .when(xpath(&quot;/person/city = &amp;#39;London&amp;#39;&quot;))</span><br><span class="line">        .to(&quot;file:target/messages/uk&quot;)</span><br><span class="line">    .otherwise()</span><br><span class="line">        .to(&quot;file:target/messages/others&quot;);</span><br></pre></td></tr></table></figure>
+<p>这条规则先对订单进行过滤，只处理header中foo的值为bar的订单，然后根据用户的城市进行将订单传给不同的endpoint。<br>Apache Camel的应用场景有很多，这里只是大致列举了几种。</p>
+<p>END</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://awenshizheyu.github.io/miracle/2019/11/19/Apache%20Camel%20%E7%B3%BB%E5%88%97%E6%96%87%E7%AB%A0-03-%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF/" data-id="ck35gambh0003b4mt4ssocxqc" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/miracle/2019/11/19/Apache%20Camel%20%E7%B3%BB%E5%88%97%E6%96%87%E7%AB%A0-04-%E9%87%8D%E8%A6%81%E6%A6%82%E5%BF%B5/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          04 - Apache Camel 系列文章 -- 重要概念
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/miracle/categories/Apache-Camel-%E7%B3%BB%E5%88%97%E6%96%87%E7%AB%A0/">Apache Camel 系列文章</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/miracle/archives/2019/11/">November 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/miracle/2019/11/19/Apache%20Camel%20%E7%B3%BB%E5%88%97%E6%96%87%E7%AB%A0-06-%E7%BB%84%E4%BB%B6-File/">06 - Apache Camel 系列文章 -组件-File</a>
+          </li>
+        
+          <li>
+            <a href="/miracle/2019/11/19/Apache%20Camel%20%E7%B3%BB%E5%88%97%E6%96%87%E7%AB%A0-05-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%EF%BC%88HelloWorld%EF%BC%89/">05 - Apache Camel 系列文章 -- 快速入门（HelloWorld）</a>
+          </li>
+        
+          <li>
+            <a href="/miracle/2019/11/19/Apache%20Camel%20%E7%B3%BB%E5%88%97%E6%96%87%E7%AB%A0-01-%20%E7%AE%80%E4%BB%8B/">01 - Apache Camel 系列文章 -- 简介</a>
+          </li>
+        
+          <li>
+            <a href="/miracle/2019/11/19/Apache%20Camel%20%E7%B3%BB%E5%88%97%E6%96%87%E7%AB%A0-02-%E4%B8%BB%E8%A6%81%E5%8A%9F%E8%83%BD/">02 - Apache Camel 系列文章 -- 主要功能</a>
+          </li>
+        
+          <li>
+            <a href="/miracle/2019/11/19/Apache%20Camel%20%E7%B3%BB%E5%88%97%E6%96%87%E7%AB%A0-04-%E9%87%8D%E8%A6%81%E6%A6%82%E5%BF%B5/">04 - Apache Camel 系列文章 -- 重要概念</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 awen<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/miracle/" class="mobile-nav-link">Home</a>
+  
+    <a href="/miracle/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/miracle/fancybox/jquery.fancybox.css">
+  <script src="/miracle/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/miracle/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
