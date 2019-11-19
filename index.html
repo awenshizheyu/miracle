@@ -66,11 +66,11 @@
     <article id="post-ApacheCamel-06-Componet-File" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/miracle/2019/11/19/ApacheCamel-06-Componet-File/" class="article-date">
-  <time datetime="2019-11-19T06:47:01.000Z" itemprop="datePublished">2019-11-19</time>
+  <time datetime="2019-11-19T06:50:52.000Z" itemprop="datePublished">2019-11-19</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/miracle/categories/Apache-Camel-%E7%B3%BB%E5%88%97%E6%96%87%E7%AB%A0/">Apache Camel 系列文章</a>
+    <a class="article-category-link" href="/miracle/categories/ApacheCamel%E7%B3%BB%E5%88%97%E6%96%87%E7%AB%A0/">ApacheCamel系列文章</a>
   </div>
 
   </div>
@@ -81,7 +81,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/miracle/2019/11/19/ApacheCamel-06-Componet-File/">06 - Apache Camel 系列文章 -组件-File</a>
+      <a class="article-title" href="/miracle/2019/11/19/ApacheCamel-06-Componet-File/">06-ApacheCamel系列文章-Component-File</a>
     </h1>
   
 
@@ -90,13 +90,240 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>上面一篇文章，我们通过HelloWord的例子，完成了ApacheCamel的入门，其实，就是使用了简单的File组件，本文，我们会深入File组件，看看他还有哪些强大的功能。</p>
-<p><img src="ApacheCamel-06-Componet-File/ddd.png" alt=""></p>
+<p><img src="ddd.png" alt=""></p>
 <p>END</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://awenshizheyu.github.io/miracle/2019/11/19/ApacheCamel-06-Componet-File/" data-id="ck35hwf5a0007i3mt3soqal2y" class="article-share-link">Share</a>
+      <a data-url="https://awenshizheyu.github.io/miracle/2019/11/19/ApacheCamel-06-Componet-File/" data-id="ck35i1hjm0007ommt4vm11207" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-ApacheCamel-01-introduction" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/miracle/2019/11/19/ApacheCamel-01-introduction/" class="article-date">
+  <time datetime="2019-11-19T06:48:57.000Z" itemprop="datePublished">2019-11-19</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/miracle/categories/ApacheCamel%E7%B3%BB%E5%88%97%E6%96%87%E7%AB%A0/">ApacheCamel系列文章</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/miracle/2019/11/19/ApacheCamel-01-introduction/">01-ApacheCamel系列文章-简介</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>工作中经常用到Apache Camel（下文用Camel代替），每次用都要找资料，没有积累，加上Camel因为属于企业级集成组件，网上的资料很少、不全面，官方提供的文档又全都是英文，每次都很纠结，所以，决定写一套文档，记录Camel的相关问题。</p>
+<p>注：本节内容因为属于概念的问题，基本都是来自网上摘抄，非本人原创，如有侵权，请联系我删除。</p>
+<h2 id="什么是Camel？"><a href="#什么是Camel？" class="headerlink" title="什么是Camel？"></a>什么是Camel？</h2><p>Apache Camel 是一个非常强大的基于规则的路由以及媒介引擎，该引擎提供了一个基于POJO的 企业应用模式(Enterprise Integration Patterns)的实现，你可以采用其异常强大且十分易用的API (可以说是一种Java的领域定义语言 Domain Specific Language)来配置其路由或者中介的规则。<br>通过这种领域定义语言，你可以在你的IDE中用简单的Java Code就可以写出一个类型安全并具有一定智能的规则描述文件。这与那种复杂的XML配置相比极大简化了规则定义开发。 当然Apache Camel也提供了一个对Spring 配置文件的支持。 Apache Camel 采用URI来描述各种组件，这样你可以很方便地与各种传输或者消息模块进行交互，其中包含的模块有 HTTP, ActiveMQ, JMS, JBI, SCA, MINA or CXF Bus API。 这些模块是采用可插拔的方式进行工作的。Apache Camel的核心十分小巧你可以很容易地将其集成在各种Java应用中。 Aapche Camel支持DSL(domain-specific languages)特定领域语言。<br>以下给出官方给出的Camel的简介（英文版）。<br>What is Camel?<br>At the core of the Camel framework is a routing engine, or more precisely a routingengine builder. It allows you to define your own routing rules, decide from which sources to accept messages, and determine how to process and send those messages to other destinations. Camel uses an integration language that allows you to define complex routing rules, akin to business processes.<br>One of the fundamental principles of Camel is that it makes no assumptions about the type of data you need to process. This is an important point, because it gives you, the developer, an opportunity to integrate any kind of system, without the need to convert your data to a canonical format.<br>Camel offers higher-level abstractions that allow you to interact with various systems using the same API regardless of the protocol or data type the systems are using. Components in Camel provide specific implementations of the API that target different protocols and data types. Out of the box, Camel comes with support for over 80 protocols and data types. Its extensible and modular architecture allows you to implement and seamlessly plug in support for your own protocols, proprietary or not. These architectural choices eliminate the need for unnecessary conversions and make Camel not only faster but also very lean. As a result, it’s suitable for embedding into other projects that require Camel’s rich processing capabilities. Other open source projects, such as Apache ServiceMix and ActiveMQ, already use Camel as a way to carry out enterprise integration.<br>We should also mention what Camel isn’t. Camel isn’t an enterprise service bus(ESB), although some call Camel a lightweight ESB because of its support for routing, transformation, monitoring, orchestration, and so forth. Camel doesn’t have a container or a reliable message bus, but it can be deployed in one, such as OpenESB or the previously mentioned ServiceMix. For that reason, we prefer to call Camel an integration framework rather than an ESB.<br><strong>以下是对上文的翻译：</strong><br>什么是Camel？<br>Camel框架的核心是一个路由引擎，或者更确切地说是一个路由引擎构建器。它允许您定义自己的路由规则，决定从哪个源接收消息，并确定如何处理这些消息并将其发送到其他目标。 Camel使用集成语言，允许您定义复杂的路由规则，类似于业务流程。<br>Camel的基本原则之一是它不会假设你需要处理的数据类型。这是一个重要的观点，因为它使开发人员有机会整合任何类型的系统，而不需要将数据转换为规范的格式。<br>Camel提供更高层次的抽象，使您可以使用相同的API与各种系统进行交互，而不管系统使用的协议或数据类型如何。 Camel中的组件提供了针对不同协议和数据类型的API的特定实现。开箱即用，Camel支持80多种协议和数据类型。其可扩展的模块化体系结构允许您实现并无缝插入支持您自己的协议，专有或非专有协议。这些架构选择消除了不必要的转换需求，使Camel不仅更快，而且非常精益。因此，它适合嵌入到其他需要Camel丰富处理能力的项目中。<br>其他开源项目（如Apache ServiceMix和ActiveMQ）已经使用Camel作为实现企业集成的一种方式。<br>我们还应该提到Camel不是什么。Camel不是一个企业服务总线（ESB），虽然有些人称Camel是一个轻量级的ESB，因为它支持路由，转换，监视，编排等等。Camel没有容器或可靠的消息总线，但可以部署在一个，如OpenESB或前面提到的ServiceMix。出于这个原因，我们宁愿给Camel一个集成框架，而不是一个ESB。</p>
+<p>END</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://awenshizheyu.github.io/miracle/2019/11/19/ApacheCamel-01-introduction/" data-id="ck35i1hiq0000ommt4ngd6uyd" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-ApacheCamel-02-MajorFunction" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/miracle/2019/11/19/ApacheCamel-02-MajorFunction/" class="article-date">
+  <time datetime="2019-11-19T06:48:57.000Z" itemprop="datePublished">2019-11-19</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/miracle/categories/ApacheCamel%E7%B3%BB%E5%88%97%E6%96%87%E7%AB%A0/">ApacheCamel系列文章</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/miracle/2019/11/19/ApacheCamel-02-MajorFunction/">02-ApacheCamel系列文章-主要功能</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>注：本节内容因为属于概念的问题，基本都是来自网上摘抄，非本人原创，如有侵权，请联系我删除。</p>
+<h2 id="主要功能"><a href="#主要功能" class="headerlink" title="主要功能"></a>主要功能</h2><p>Apache Camel主要提供了以下功能：</p>
+<ol>
+<li>实现了EIP的大部分模式，如果你要在不同的应用系统之间以不同的方式传递消息，那么你可以从Apache Camel中找到解决反感。</li>
+<li>提供了大量Component(组件)，每个组件都是一种消息中间件(或消息服务)的具体实现，每个消息中间件所用的协议都是不同的，因此，你可以通过多种不同的协议来完成消息传输。</li>
+<li>允许用户定义灵活的路由规则，从这个角度来说，Apache Camel时一个规则引擎。</li>
+</ol>
+<p>END</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://awenshizheyu.github.io/miracle/2019/11/19/ApacheCamel-02-MajorFunction/" data-id="ck35i1hj30001ommt4xp05vst" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-ApacheCamel-03-UseCase" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/miracle/2019/11/19/ApacheCamel-03-UseCase/" class="article-date">
+  <time datetime="2019-11-19T06:48:57.000Z" itemprop="datePublished">2019-11-19</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/miracle/categories/ApacheCamel%E7%B3%BB%E5%88%97%E6%96%87%E7%AB%A0/">ApacheCamel系列文章</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/miracle/2019/11/19/ApacheCamel-03-UseCase/">03-ApacheCamel系列文章-使用场景</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>注：本节内容因为属于概念的问题，基本都是来自网上摘抄，非本人原创，如有侵权，请联系我删除。</p>
+<p>下面列列举一些Camel的使用场景：</p>
+<h2 id="1-消息汇聚"><a href="#1-消息汇聚" class="headerlink" title="1. 消息汇聚"></a>1. 消息汇聚</h2><p>比如你有来自不同服务器的消息，有ActiveMQ，RabbitMQ，WebService等，你想把它们都存储到日志文件中，那么可以定义如下规则。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">new RouteBuilder() &#123;</span><br><span class="line">    @Override</span><br><span class="line">    public void configure() throws Exception &#123;</span><br><span class="line">        from(&quot;amqp:queue:incoming&quot;).to(&quot;log:com.mycompany.log?level=DEBUG&quot;);</span><br><span class="line">        from(&quot;rabbitmq://localhost/A/routingKey=B&quot;).to(&quot;log:com.mycompany.log?level=DEBUG&quot;);</span><br><span class="line">        from(&quot;jetty:http://localhost:8080/myapp/myservice&quot;).to(&quot;log:com.mycompany.log?level=DEBUG&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>from表示从这个endpoing取消息，to表示将消息发往这个endpoint，endpoint是消息地址，包含协议类型以及url。 </p>
+<h2 id="2-消息分发"><a href="#2-消息分发" class="headerlink" title="2. 消息分发"></a>2. 消息分发</h2><p>分为两种，顺序分发和并行分发。<br>顺序分发时，消息会先到到第一个endpoing，第一个endpoint处理完成后，再分发到下下个endpoint。如果第一个endpoing处理出现故障，那么消息不会被传到第二个endpoint。比如有如下规则:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">from(&quot;amqp:queue:order&quot;).to(&quot;uri:validateBean&quot;, &quot;uri:handleBean&quot;, &quot;uri:emailBean&quot;);</span><br></pre></td></tr></table></figure>
+<p>这个规则是从order队列中取订单信息，然后依次验证订单，处理订单，并发送邮件通知用户。任何一个步骤出错，下一个步骤将不回执行。<br>并行分发是将得到的消息同时发送到不同的endpoint，没有先后顺序之分，各个endpoint处理消息也是独立的。如果将以上路由改成:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">from(&quot;amqp:queue:order&quot;).multicast().to(&quot;uri:validateBean&quot;, &quot;uri:handleBean&quot;, &quot;uri:emailBean&quot;);</span><br></pre></td></tr></table></figure>
+<p>那么消息就会同时发到to所对应的endpoint。</p>
+<h2 id="3-消息转换"><a href="#3-消息转换" class="headerlink" title="3. 消息转换"></a>3. 消息转换</h2><p>比如想将xml数据转换成json数据，可以使用如下规则。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">from(&quot;amqp:queue:order&quot;).process(new XmlToJsonProcessor()).to(&quot;bean:orderHandler&quot;);</span><br></pre></td></tr></table></figure>
+<p>其中XmlToJsonProcessor是自定义的类，继承org.apache.camel.Processor，用于将xml数据转换成json。</p>
+<h2 id="4-规则引擎"><a href="#4-规则引擎" class="headerlink" title="4. 规则引擎"></a>4. 规则引擎</h2><p>你可以使用Spring Xml, Groovy这类DSL来定义route，这样无需修改代码，就能达到修改业务逻辑的目的。<br>例如上边的规则，</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">from(&quot;amqp:queue:order&quot;).to(&quot;uri:validateBean&quot;, &quot;uri:handleBean&quot;, &quot;uri:emailBean&quot;);</span><br></pre></td></tr></table></figure>
+<p>使用Spring Xml定义如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;route&gt;</span><br><span class="line">        &lt;from uri=&quot;amqp:queue:order&quot;/&gt;</span><br><span class="line">        &lt;multicast&gt;</span><br><span class="line">            &lt;to uri=&quot;uri:validateBean&quot;/&gt;</span><br><span class="line">            &lt;to uri=&quot;uri:handleBean&quot;/&gt;</span><br><span class="line">            &lt;to uri=&quot;uri:emailBean&quot;/&gt;</span><br><span class="line">        &lt;/multicast&gt;</span><br><span class="line">&lt;/route&gt;</span><br></pre></td></tr></table></figure>
+
+<p>如果需要在处理完订单后添加日志，可以改称如下规则</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;route&gt;</span><br><span class="line">        &lt;from uri=&quot;amqp:queue:order&quot;/&gt;</span><br><span class="line">        &lt;multicast&gt;</span><br><span class="line">            &lt;to uri=&quot;uri:validateBean&quot;/&gt;</span><br><span class="line">            &lt;to uri=&quot;uri:handleBean&quot;/&gt;</span><br><span class="line">            &lt;to uri=&quot;log:com.mycompany.log?level=INFO&quot;/&gt;</span><br><span class="line">            &lt;to uri=&quot;uri:emailBean&quot;/&gt;</span><br><span class="line">        &lt;/multicast&gt;</span><br><span class="line">&lt;/route&gt;</span><br></pre></td></tr></table></figure>
+<p>另外camel提供了大量的内置Processor，用于逻辑运算，过滤等，这样更加容易定移除灵活的route，例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">from(&quot;amqp:queue:order&quot;)</span><br><span class="line">    .filter(header(&quot;foo&quot;).isEqualTo(&quot;bar&quot;))</span><br><span class="line">    .choice()</span><br><span class="line">    .when(xpath(&quot;/person/city = &amp;#39;London&amp;#39;&quot;))</span><br><span class="line">        .to(&quot;file:target/messages/uk&quot;)</span><br><span class="line">    .otherwise()</span><br><span class="line">        .to(&quot;file:target/messages/others&quot;);</span><br></pre></td></tr></table></figure>
+<p>这条规则先对订单进行过滤，只处理header中foo的值为bar的订单，然后根据用户的城市进行将订单传给不同的endpoint。<br>Apache Camel的应用场景有很多，这里只是大致列举了几种。</p>
+<p>END</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://awenshizheyu.github.io/miracle/2019/11/19/ApacheCamel-03-UseCase/" data-id="ck35i1hjb0003ommt1vg4bdxi" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-ApacheCamel-04-Concepts" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/miracle/2019/11/19/ApacheCamel-04-Concepts/" class="article-date">
+  <time datetime="2019-11-19T06:48:57.000Z" itemprop="datePublished">2019-11-19</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/miracle/categories/ApacheCamel%E7%B3%BB%E5%88%97%E6%96%87%E7%AB%A0/">ApacheCamel系列文章</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/miracle/2019/11/19/ApacheCamel-04-Concepts/">04-ApacheCamel系列文章-重要概念</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>注：本节内容因为属于概念的问题，基本都是来自网上摘抄，非本人原创，如有侵权，请联系我删除。</p>
+<h2 id="Camel-Context"><a href="#Camel-Context" class="headerlink" title="Camel Context"></a>Camel Context</h2><p>camel的运行容器，管理所有的camel路由。类似于spring中的context。</p>
+<h2 id="Route"><a href="#Route" class="headerlink" title="Route"></a>Route</h2><p>顾名思义，Route，就是路由，它定义了Message如何在一个系统中传输的真实路径或者通道。路由引擎自身并不暴露给开发者，但是开发者可以自己定义路由，并且需要信任引擎可以完成复杂的传输工作。每个路由都有一个唯一的标识符，用来记录日志、调试、监控，以及启动或者停止路由。<br>路由也有一个输入的Message，因此他们也有效的链接到一个输入端点。路由定义了一种领域特有的语言（DSL）。Camel提供了java、scala和基于XM的Route-DSL。<br>示例路由：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//simple route.</span><br><span class="line">from(&quot;file:data/inbox&quot;).to(&quot;jms:queue:order&quot;)</span><br></pre></td></tr></table></figure>
+<p>路由可以使用过滤器、多播、接收列表、并行处理来定义，从而变得非常灵活。由于这篇文章只是简单的介绍Camel，我这里只给出一个注释的例子。这个使用了“direct:”架构，他提供了当消息生产者发出消息后直接的、同步的调用。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//Every 10 seconds timer sends an Exchange to direct:prepare</span><br><span class="line">from(&quot;timer://foo?fixedRate=true&amp;period=10000&quot;).to(&quot;direct:prepare&quot;);</span><br><span class="line">// Onother Routes can begin from &quot;direct:prepare&quot;</span><br><span class="line">// This now depends on timer, logging and putting a message to the queue.</span><br><span class="line">from(direct:prepare).to(&quot;log:com.mycompany.order?level=DEBUG&quot;).to(&quot;jms:queue:order?jmsMessageType=Text&quot;);</span><br></pre></td></tr></table></figure>
+
+<h2 id="Endpoint"><a href="#Endpoint" class="headerlink" title="Endpoint"></a>Endpoint</h2><p>是Camel中的一个基本概念，Endpoint作为Camel系统中一个通道的端点，可以发送或者接受消息。在Camel中Endpoint使用URI来配置。在运行时Camel通过URI来查找端点。端点的功能强大、全面而且又可维护。<br>个人理解为一个路由（流程）的每一个环节，这个endpoint会定义在该环节中做什么操作</p>
+<h2 id="Component"><a href="#Component" class="headerlink" title="Component"></a>Component</h2><p>Component是一些Endpoints URI的集合。他们通过连接码来链接（例如file:），而且作为一个endpoint的工厂。现在Camel中又超过80个Component，可扩展。<br>个人理解是对Endpoint的一个封装，因为每一类Endpoint都需要一个uri作为入口。那么就需要对这个Endpoint的producer和consumer进行封装。</p>
+<h2 id="Exchange"><a href="#Exchange" class="headerlink" title="Exchange"></a>Exchange</h2><p>非常重要的一个概念，数据的交换就靠他了，一个消息之间通信的抽象的会话。主要包括: </p>
+<ul>
+<li>ExchangeId（唯一标识） </li>
+<li>MEP（一种模式，有InOnly、OutOnly等） </li>
+<li>Exception（路由过程中的异常） </li>
+<li>Properties（可以进行传递的属性，是键值对） </li>
+<li>Message（InMessage和OutMessage）。</li>
+</ul>
+<h2 id="Message"><a href="#Message" class="headerlink" title="Message"></a>Message</h2><p>Camel中一个基本的包含数据和路由的实体，Messages包含了 </p>
+<ul>
+<li>唯一的识别（Unique Identifier）–java.lang.String类型 </li>
+<li>头信息（Headers）–会提供一些内容的提示，头信息被组织成名值对的形式，string–&gt;Object </li>
+<li>内容（body）是一个Object类型的对象，这就意味着，你要确保接收器能够理解消息的内容。当消息发送器和接收器使用不同的内容格式的时候，你可以使用Camel的数据转换机制将其转换为一个特定的格式。在许多情况下预先定义类型可以被自动转换。 </li>
+<li>错误标记(fault flag)使用来标记正常或者错误的标记，通常由一些标准类定义，例如（WSDL）</li>
+</ul>
+<h2 id="Processor"><a href="#Processor" class="headerlink" title="Processor"></a>Processor</h2><p>是一个消息接受者和消息通信的处理器。<br>当然，Processor是Route的一个元素，可用来消息格式转换或者其他的一些变换。<br>个人理解就是对exchange做处理的一个环节，不过是将它单独拿出来而已。</p>
+<h2 id="Producer"><a href="#Producer" class="headerlink" title="Producer"></a>Producer</h2><p>生产者是Camel抽象，是指能够创建消息并将消息发送到端点的实体。<br>当需要将消息发送到端点时，生产者将创建一个交换并使用与该特定端点兼容的数据来填充它。<br>例如，FileProducer会将消息正文写入文件。 另一方面，JmsProducer会将Camel消息映射到javax.jms.Message，然后将其发送到JMS目标。 这是Camel的一个重要特征，因为它隐藏了与特定运输交互的复杂性。 所有你需要做的就是把消息路由到一个端点，生产者做繁重的工作</p>
+<h2 id="Consumer"><a href="#Consumer" class="headerlink" title="Consumer"></a>Consumer</h2><p>消费者是接收生产者产生的消息的服务，将其包装在交换中并发送给他们进行处理。 消费者是Camel交易的来源。<br>为了创建新的交换，消费者将使用包装所消耗的有效载荷的端点。 然后使用处理器来使用路由引擎启动Camel交换机的路由。<br>在Camel中有两种消费者：事件驱动的消费者和轮询的消费者。<br>这些消费者之间的差异是重要的，因为他们帮助解决不同的问题。一个事件驱动的消费者等待空闲，直到消息到达，然后唤醒并消费该消息。最熟悉的消费者可能是事件驱动的消费者，这种消费者大多与客户端 - 服务器体系结构和Web服务相关联。 它在EIP世界中也被称为异步接收器。<br>事件驱动的使用者在特定的消息通道（通常是TCP / IP端口或JMS队列）上侦听，并等待客户端向其发送消息。 当消息到达时，消费者醒来并把消息处理。</p>
+<h2 id="Introduction-to-Java-DSL"><a href="#Introduction-to-Java-DSL" class="headerlink" title="Introduction to Java DSL"></a>Introduction to Java DSL</h2><p>对于许多人来说，要实现一个“domain-specific language” （面向领域的语言）涉及到了一个能够处理这个特定领域语言的关键字以及语法的编译器或者是解释器。对于Camel来说，它没有这么做。在Camel文档中一直都在使用的“Java DSL”而不是 “DSL” ，其目的就是想避免混淆这两个概念。Camel中的“Java DSL”是一个可以像DSL一样被使用的类库，除此之外它还使用了大量Java的语义。你可以看一下下面的例子，在例子下面的备注里， 解释了这个例子的中所用的组件。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Example of Camel&apos;s &quot;Java DSL&quot;</span><br><span class="line">RouteBuilder builder = new RouteBuilder() &#123;</span><br><span class="line">    public void configure() &#123;</span><br><span class="line">        from(&quot;queue:a&quot;).filter(header(&quot;foo&quot;).isEqualTo(&quot;bar&quot;)).to(&quot;queue:b&quot;);</span><br><span class="line">        from(&quot;queue:c&quot;).choice()</span><br><span class="line">                .when(header(&quot;foo&quot;).isEqualTo(&quot;bar&quot;)).to(&quot;queue:d&quot;)</span><br><span class="line">                .when(header(&quot;foo&quot;).isEqualTo(&quot;cheese&quot;)).to(&quot;queue:e&quot;)</span><br><span class="line">                .otherwise().to(&quot;queue:f&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line">CamelContext myCamelContext = new DefaultCamelContext();</span><br><span class="line">myCamelContext.addRoutes(builder);</span><br></pre></td></tr></table></figure>
+<p>上面例子的第一行创建一个一个RouteBuilder的匿名类的实例，这个匿名类需要实现 configure（）方法。<br>camelContext.addRoutes(RouterBuilder builder) 方法中调用了builder.setContext(this)方法，这样RouteBuilder对象就获得了与之对应的CamelContext的，然后调用builder.configure()方法。在configure方法中，可以调用例如 from()， filter(), choice(), when(),isEqualTo(), otherwise()以及to() 方法。<br>RouteBuilder.from(String uri) 方法会调用与之对应的CamelContext的getEndpoint(uri)方法来获得指定的Endpoint，并用一个FromBuilder包装这个Endpoint。这样 FromBuilder.filter(Predicate predicate) 方法就会创建一个在header(“foo”).isEqualTo(“bar”)这个表达式基础创建的Predicate（所谓的条件）创建一个FilterProcessor对象。就这样， 通过定义这些操作我们逐渐构建出了一个Route对象（使用RouterBuilder进行包装的）并且将这个Route对象添加进了与RouteBuilder所关联的CamelContext中。</p>
+<p>END</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://awenshizheyu.github.io/miracle/2019/11/19/ApacheCamel-04-Concepts/" data-id="ck35i1hje0004ommt0a8s76a7" class="article-share-link">Share</a>
       
       
     </footer>
@@ -109,11 +336,11 @@
     <article id="post-ApacheCamel-05-QuickStart-HelloWorld" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/miracle/2019/11/19/ApacheCamel-05-QuickStart-HelloWorld/" class="article-date">
-  <time datetime="2019-11-19T06:00:16.000Z" itemprop="datePublished">2019-11-19</time>
+  <time datetime="2019-11-19T06:48:57.000Z" itemprop="datePublished">2019-11-19</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/miracle/categories/Apache-Camel-%E7%B3%BB%E5%88%97%E6%96%87%E7%AB%A0/">Apache Camel 系列文章</a>
+    <a class="article-category-link" href="/miracle/categories/ApacheCamel%E7%B3%BB%E5%88%97%E6%96%87%E7%AB%A0/">ApacheCamel系列文章</a>
   </div>
 
   </div>
@@ -124,7 +351,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/miracle/2019/11/19/ApacheCamel-05-QuickStart-HelloWorld/">05 - Apache Camel 系列文章 -- 快速入门（HelloWorld）</a>
+      <a class="article-title" href="/miracle/2019/11/19/ApacheCamel-05-QuickStart-HelloWorld/">05-ApacheCamel系列文章-快速入门（HelloWorld）</a>
     </h1>
   
 
@@ -172,234 +399,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://awenshizheyu.github.io/miracle/2019/11/19/ApacheCamel-05-QuickStart-HelloWorld/" data-id="ck35hwf560005i3mt0qpk39iv" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-ApacheCamel-01-introduction" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/miracle/2019/11/19/ApacheCamel-01-introduction/" class="article-date">
-  <time datetime="2019-11-19T05:59:05.000Z" itemprop="datePublished">2019-11-19</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/miracle/categories/Apache-Camel-%E7%B3%BB%E5%88%97%E6%96%87%E7%AB%A0/">Apache Camel 系列文章</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/miracle/2019/11/19/ApacheCamel-01-introduction/">01 - Apache Camel 系列文章 -- 简介</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>工作中经常用到Apache Camel（下文用Camel代替），每次用都要找资料，没有积累，加上Camel因为属于企业级集成组件，网上的资料很少、不全面，官方提供的文档又全都是英文，每次都很纠结，所以，决定写一套文档，记录Camel的相关问题。</p>
-<p>注：本节内容因为属于概念的问题，基本都是来自网上摘抄，非本人原创，如有侵权，请联系我删除。</p>
-<h2 id="什么是Camel？"><a href="#什么是Camel？" class="headerlink" title="什么是Camel？"></a>什么是Camel？</h2><p>Apache Camel 是一个非常强大的基于规则的路由以及媒介引擎，该引擎提供了一个基于POJO的 企业应用模式(Enterprise Integration Patterns)的实现，你可以采用其异常强大且十分易用的API (可以说是一种Java的领域定义语言 Domain Specific Language)来配置其路由或者中介的规则。<br>通过这种领域定义语言，你可以在你的IDE中用简单的Java Code就可以写出一个类型安全并具有一定智能的规则描述文件。这与那种复杂的XML配置相比极大简化了规则定义开发。 当然Apache Camel也提供了一个对Spring 配置文件的支持。 Apache Camel 采用URI来描述各种组件，这样你可以很方便地与各种传输或者消息模块进行交互，其中包含的模块有 HTTP, ActiveMQ, JMS, JBI, SCA, MINA or CXF Bus API。 这些模块是采用可插拔的方式进行工作的。Apache Camel的核心十分小巧你可以很容易地将其集成在各种Java应用中。 Aapche Camel支持DSL(domain-specific languages)特定领域语言。<br>以下给出官方给出的Camel的简介（英文版）。<br>What is Camel?<br>At the core of the Camel framework is a routing engine, or more precisely a routingengine builder. It allows you to define your own routing rules, decide from which sources to accept messages, and determine how to process and send those messages to other destinations. Camel uses an integration language that allows you to define complex routing rules, akin to business processes.<br>One of the fundamental principles of Camel is that it makes no assumptions about the type of data you need to process. This is an important point, because it gives you, the developer, an opportunity to integrate any kind of system, without the need to convert your data to a canonical format.<br>Camel offers higher-level abstractions that allow you to interact with various systems using the same API regardless of the protocol or data type the systems are using. Components in Camel provide specific implementations of the API that target different protocols and data types. Out of the box, Camel comes with support for over 80 protocols and data types. Its extensible and modular architecture allows you to implement and seamlessly plug in support for your own protocols, proprietary or not. These architectural choices eliminate the need for unnecessary conversions and make Camel not only faster but also very lean. As a result, it’s suitable for embedding into other projects that require Camel’s rich processing capabilities. Other open source projects, such as Apache ServiceMix and ActiveMQ, already use Camel as a way to carry out enterprise integration.<br>We should also mention what Camel isn’t. Camel isn’t an enterprise service bus(ESB), although some call Camel a lightweight ESB because of its support for routing, transformation, monitoring, orchestration, and so forth. Camel doesn’t have a container or a reliable message bus, but it can be deployed in one, such as OpenESB or the previously mentioned ServiceMix. For that reason, we prefer to call Camel an integration framework rather than an ESB.<br><strong>以下是对上文的翻译：</strong><br>什么是Camel？<br>Camel框架的核心是一个路由引擎，或者更确切地说是一个路由引擎构建器。它允许您定义自己的路由规则，决定从哪个源接收消息，并确定如何处理这些消息并将其发送到其他目标。 Camel使用集成语言，允许您定义复杂的路由规则，类似于业务流程。<br>Camel的基本原则之一是它不会假设你需要处理的数据类型。这是一个重要的观点，因为它使开发人员有机会整合任何类型的系统，而不需要将数据转换为规范的格式。<br>Camel提供更高层次的抽象，使您可以使用相同的API与各种系统进行交互，而不管系统使用的协议或数据类型如何。 Camel中的组件提供了针对不同协议和数据类型的API的特定实现。开箱即用，Camel支持80多种协议和数据类型。其可扩展的模块化体系结构允许您实现并无缝插入支持您自己的协议，专有或非专有协议。这些架构选择消除了不必要的转换需求，使Camel不仅更快，而且非常精益。因此，它适合嵌入到其他需要Camel丰富处理能力的项目中。<br>其他开源项目（如Apache ServiceMix和ActiveMQ）已经使用Camel作为实现企业集成的一种方式。<br>我们还应该提到Camel不是什么。Camel不是一个企业服务总线（ESB），虽然有些人称Camel是一个轻量级的ESB，因为它支持路由，转换，监视，编排等等。Camel没有容器或可靠的消息总线，但可以部署在一个，如OpenESB或前面提到的ServiceMix。出于这个原因，我们宁愿给Camel一个集成框架，而不是一个ESB。</p>
-<p>END</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://awenshizheyu.github.io/miracle/2019/11/19/ApacheCamel-01-introduction/" data-id="ck35hwf4e0000i3mtft29cemz" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-ApacheCamel-02-MajorFunction" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/miracle/2019/11/19/ApacheCamel-02-MajorFunction/" class="article-date">
-  <time datetime="2019-11-19T05:59:05.000Z" itemprop="datePublished">2019-11-19</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/miracle/categories/Apache-Camel-%E7%B3%BB%E5%88%97%E6%96%87%E7%AB%A0/">Apache Camel 系列文章</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/miracle/2019/11/19/ApacheCamel-02-MajorFunction/">02 - Apache Camel 系列文章 -- 主要功能</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>注：本节内容因为属于概念的问题，基本都是来自网上摘抄，非本人原创，如有侵权，请联系我删除。</p>
-<h2 id="主要功能"><a href="#主要功能" class="headerlink" title="主要功能"></a>主要功能</h2><p>Apache Camel主要提供了以下功能：</p>
-<ol>
-<li>实现了EIP的大部分模式，如果你要在不同的应用系统之间以不同的方式传递消息，那么你可以从Apache Camel中找到解决反感。</li>
-<li>提供了大量Component(组件)，每个组件都是一种消息中间件(或消息服务)的具体实现，每个消息中间件所用的协议都是不同的，因此，你可以通过多种不同的协议来完成消息传输。</li>
-<li>允许用户定义灵活的路由规则，从这个角度来说，Apache Camel时一个规则引擎。</li>
-</ol>
-<p>END</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://awenshizheyu.github.io/miracle/2019/11/19/ApacheCamel-02-MajorFunction/" data-id="ck35hwf4p0001i3mtd7ixd7un" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-ApacheCamel-04-Concepts" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/miracle/2019/11/19/ApacheCamel-04-Concepts/" class="article-date">
-  <time datetime="2019-11-19T05:59:05.000Z" itemprop="datePublished">2019-11-19</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/miracle/categories/Apache-Camel-%E7%B3%BB%E5%88%97%E6%96%87%E7%AB%A0/">Apache Camel 系列文章</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/miracle/2019/11/19/ApacheCamel-04-Concepts/">04 - Apache Camel 系列文章 -- 重要概念</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>注：本节内容因为属于概念的问题，基本都是来自网上摘抄，非本人原创，如有侵权，请联系我删除。</p>
-<h2 id="Camel-Context"><a href="#Camel-Context" class="headerlink" title="Camel Context"></a>Camel Context</h2><p>camel的运行容器，管理所有的camel路由。类似于spring中的context。</p>
-<h2 id="Route"><a href="#Route" class="headerlink" title="Route"></a>Route</h2><p>顾名思义，Route，就是路由，它定义了Message如何在一个系统中传输的真实路径或者通道。路由引擎自身并不暴露给开发者，但是开发者可以自己定义路由，并且需要信任引擎可以完成复杂的传输工作。每个路由都有一个唯一的标识符，用来记录日志、调试、监控，以及启动或者停止路由。<br>路由也有一个输入的Message，因此他们也有效的链接到一个输入端点。路由定义了一种领域特有的语言（DSL）。Camel提供了java、scala和基于XM的Route-DSL。<br>示例路由：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//simple route.</span><br><span class="line">from(&quot;file:data/inbox&quot;).to(&quot;jms:queue:order&quot;)</span><br></pre></td></tr></table></figure>
-<p>路由可以使用过滤器、多播、接收列表、并行处理来定义，从而变得非常灵活。由于这篇文章只是简单的介绍Camel，我这里只给出一个注释的例子。这个使用了“direct:”架构，他提供了当消息生产者发出消息后直接的、同步的调用。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//Every 10 seconds timer sends an Exchange to direct:prepare</span><br><span class="line">from(&quot;timer://foo?fixedRate=true&amp;period=10000&quot;).to(&quot;direct:prepare&quot;);</span><br><span class="line">// Onother Routes can begin from &quot;direct:prepare&quot;</span><br><span class="line">// This now depends on timer, logging and putting a message to the queue.</span><br><span class="line">from(direct:prepare).to(&quot;log:com.mycompany.order?level=DEBUG&quot;).to(&quot;jms:queue:order?jmsMessageType=Text&quot;);</span><br></pre></td></tr></table></figure>
-
-<h2 id="Endpoint"><a href="#Endpoint" class="headerlink" title="Endpoint"></a>Endpoint</h2><p>是Camel中的一个基本概念，Endpoint作为Camel系统中一个通道的端点，可以发送或者接受消息。在Camel中Endpoint使用URI来配置。在运行时Camel通过URI来查找端点。端点的功能强大、全面而且又可维护。<br>个人理解为一个路由（流程）的每一个环节，这个endpoint会定义在该环节中做什么操作</p>
-<h2 id="Component"><a href="#Component" class="headerlink" title="Component"></a>Component</h2><p>Component是一些Endpoints URI的集合。他们通过连接码来链接（例如file:），而且作为一个endpoint的工厂。现在Camel中又超过80个Component，可扩展。<br>个人理解是对Endpoint的一个封装，因为每一类Endpoint都需要一个uri作为入口。那么就需要对这个Endpoint的producer和consumer进行封装。</p>
-<h2 id="Exchange"><a href="#Exchange" class="headerlink" title="Exchange"></a>Exchange</h2><p>非常重要的一个概念，数据的交换就靠他了，一个消息之间通信的抽象的会话。主要包括: </p>
-<ul>
-<li>ExchangeId（唯一标识） </li>
-<li>MEP（一种模式，有InOnly、OutOnly等） </li>
-<li>Exception（路由过程中的异常） </li>
-<li>Properties（可以进行传递的属性，是键值对） </li>
-<li>Message（InMessage和OutMessage）。</li>
-</ul>
-<h2 id="Message"><a href="#Message" class="headerlink" title="Message"></a>Message</h2><p>Camel中一个基本的包含数据和路由的实体，Messages包含了 </p>
-<ul>
-<li>唯一的识别（Unique Identifier）–java.lang.String类型 </li>
-<li>头信息（Headers）–会提供一些内容的提示，头信息被组织成名值对的形式，string–&gt;Object </li>
-<li>内容（body）是一个Object类型的对象，这就意味着，你要确保接收器能够理解消息的内容。当消息发送器和接收器使用不同的内容格式的时候，你可以使用Camel的数据转换机制将其转换为一个特定的格式。在许多情况下预先定义类型可以被自动转换。 </li>
-<li>错误标记(fault flag)使用来标记正常或者错误的标记，通常由一些标准类定义，例如（WSDL）</li>
-</ul>
-<h2 id="Processor"><a href="#Processor" class="headerlink" title="Processor"></a>Processor</h2><p>是一个消息接受者和消息通信的处理器。<br>当然，Processor是Route的一个元素，可用来消息格式转换或者其他的一些变换。<br>个人理解就是对exchange做处理的一个环节，不过是将它单独拿出来而已。</p>
-<h2 id="Producer"><a href="#Producer" class="headerlink" title="Producer"></a>Producer</h2><p>生产者是Camel抽象，是指能够创建消息并将消息发送到端点的实体。<br>当需要将消息发送到端点时，生产者将创建一个交换并使用与该特定端点兼容的数据来填充它。<br>例如，FileProducer会将消息正文写入文件。 另一方面，JmsProducer会将Camel消息映射到javax.jms.Message，然后将其发送到JMS目标。 这是Camel的一个重要特征，因为它隐藏了与特定运输交互的复杂性。 所有你需要做的就是把消息路由到一个端点，生产者做繁重的工作</p>
-<h2 id="Consumer"><a href="#Consumer" class="headerlink" title="Consumer"></a>Consumer</h2><p>消费者是接收生产者产生的消息的服务，将其包装在交换中并发送给他们进行处理。 消费者是Camel交易的来源。<br>为了创建新的交换，消费者将使用包装所消耗的有效载荷的端点。 然后使用处理器来使用路由引擎启动Camel交换机的路由。<br>在Camel中有两种消费者：事件驱动的消费者和轮询的消费者。<br>这些消费者之间的差异是重要的，因为他们帮助解决不同的问题。一个事件驱动的消费者等待空闲，直到消息到达，然后唤醒并消费该消息。最熟悉的消费者可能是事件驱动的消费者，这种消费者大多与客户端 - 服务器体系结构和Web服务相关联。 它在EIP世界中也被称为异步接收器。<br>事件驱动的使用者在特定的消息通道（通常是TCP / IP端口或JMS队列）上侦听，并等待客户端向其发送消息。 当消息到达时，消费者醒来并把消息处理。</p>
-<h2 id="Introduction-to-Java-DSL"><a href="#Introduction-to-Java-DSL" class="headerlink" title="Introduction to Java DSL"></a>Introduction to Java DSL</h2><p>对于许多人来说，要实现一个“domain-specific language” （面向领域的语言）涉及到了一个能够处理这个特定领域语言的关键字以及语法的编译器或者是解释器。对于Camel来说，它没有这么做。在Camel文档中一直都在使用的“Java DSL”而不是 “DSL” ，其目的就是想避免混淆这两个概念。Camel中的“Java DSL”是一个可以像DSL一样被使用的类库，除此之外它还使用了大量Java的语义。你可以看一下下面的例子，在例子下面的备注里， 解释了这个例子的中所用的组件。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Example of Camel&apos;s &quot;Java DSL&quot;</span><br><span class="line">RouteBuilder builder = new RouteBuilder() &#123;</span><br><span class="line">    public void configure() &#123;</span><br><span class="line">        from(&quot;queue:a&quot;).filter(header(&quot;foo&quot;).isEqualTo(&quot;bar&quot;)).to(&quot;queue:b&quot;);</span><br><span class="line">        from(&quot;queue:c&quot;).choice()</span><br><span class="line">                .when(header(&quot;foo&quot;).isEqualTo(&quot;bar&quot;)).to(&quot;queue:d&quot;)</span><br><span class="line">                .when(header(&quot;foo&quot;).isEqualTo(&quot;cheese&quot;)).to(&quot;queue:e&quot;)</span><br><span class="line">                .otherwise().to(&quot;queue:f&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line">CamelContext myCamelContext = new DefaultCamelContext();</span><br><span class="line">myCamelContext.addRoutes(builder);</span><br></pre></td></tr></table></figure>
-<p>上面例子的第一行创建一个一个RouteBuilder的匿名类的实例，这个匿名类需要实现 configure（）方法。<br>camelContext.addRoutes(RouterBuilder builder) 方法中调用了builder.setContext(this)方法，这样RouteBuilder对象就获得了与之对应的CamelContext的，然后调用builder.configure()方法。在configure方法中，可以调用例如 from()， filter(), choice(), when(),isEqualTo(), otherwise()以及to() 方法。<br>RouteBuilder.from(String uri) 方法会调用与之对应的CamelContext的getEndpoint(uri)方法来获得指定的Endpoint，并用一个FromBuilder包装这个Endpoint。这样 FromBuilder.filter(Predicate predicate) 方法就会创建一个在header(“foo”).isEqualTo(“bar”)这个表达式基础创建的Predicate（所谓的条件）创建一个FilterProcessor对象。就这样， 通过定义这些操作我们逐渐构建出了一个Route对象（使用RouterBuilder进行包装的）并且将这个Route对象添加进了与RouteBuilder所关联的CamelContext中。</p>
-<p>END</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://awenshizheyu.github.io/miracle/2019/11/19/ApacheCamel-04-Concepts/" data-id="ck35hwf540004i3mt2zaw0pe1" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-ApacheCamel-03-UseCase" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/miracle/2019/11/19/ApacheCamel-03-UseCase/" class="article-date">
-  <time datetime="2019-11-19T05:57:58.000Z" itemprop="datePublished">2019-11-19</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/miracle/categories/Apache-Camel-%E7%B3%BB%E5%88%97%E6%96%87%E7%AB%A0/">Apache Camel 系列文章</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/miracle/2019/11/19/ApacheCamel-03-UseCase/">03 - Apache Camel 系列文章 -- 使用场景</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>注：本节内容因为属于概念的问题，基本都是来自网上摘抄，非本人原创，如有侵权，请联系我删除。</p>
-<p>下面列列举一些Camel的使用场景：</p>
-<h2 id="1-消息汇聚"><a href="#1-消息汇聚" class="headerlink" title="1. 消息汇聚"></a>1. 消息汇聚</h2><p>比如你有来自不同服务器的消息，有ActiveMQ，RabbitMQ，WebService等，你想把它们都存储到日志文件中，那么可以定义如下规则。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">new RouteBuilder() &#123;</span><br><span class="line">    @Override</span><br><span class="line">    public void configure() throws Exception &#123;</span><br><span class="line">        from(&quot;amqp:queue:incoming&quot;).to(&quot;log:com.mycompany.log?level=DEBUG&quot;);</span><br><span class="line">        from(&quot;rabbitmq://localhost/A/routingKey=B&quot;).to(&quot;log:com.mycompany.log?level=DEBUG&quot;);</span><br><span class="line">        from(&quot;jetty:http://localhost:8080/myapp/myservice&quot;).to(&quot;log:com.mycompany.log?level=DEBUG&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>from表示从这个endpoing取消息，to表示将消息发往这个endpoint，endpoint是消息地址，包含协议类型以及url。 </p>
-<h2 id="2-消息分发"><a href="#2-消息分发" class="headerlink" title="2. 消息分发"></a>2. 消息分发</h2><p>分为两种，顺序分发和并行分发。<br>顺序分发时，消息会先到到第一个endpoing，第一个endpoint处理完成后，再分发到下下个endpoint。如果第一个endpoing处理出现故障，那么消息不会被传到第二个endpoint。比如有如下规则:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">from(&quot;amqp:queue:order&quot;).to(&quot;uri:validateBean&quot;, &quot;uri:handleBean&quot;, &quot;uri:emailBean&quot;);</span><br></pre></td></tr></table></figure>
-<p>这个规则是从order队列中取订单信息，然后依次验证订单，处理订单，并发送邮件通知用户。任何一个步骤出错，下一个步骤将不回执行。<br>并行分发是将得到的消息同时发送到不同的endpoint，没有先后顺序之分，各个endpoint处理消息也是独立的。如果将以上路由改成:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">from(&quot;amqp:queue:order&quot;).multicast().to(&quot;uri:validateBean&quot;, &quot;uri:handleBean&quot;, &quot;uri:emailBean&quot;);</span><br></pre></td></tr></table></figure>
-<p>那么消息就会同时发到to所对应的endpoint。</p>
-<h2 id="3-消息转换"><a href="#3-消息转换" class="headerlink" title="3. 消息转换"></a>3. 消息转换</h2><p>比如想将xml数据转换成json数据，可以使用如下规则。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">from(&quot;amqp:queue:order&quot;).process(new XmlToJsonProcessor()).to(&quot;bean:orderHandler&quot;);</span><br></pre></td></tr></table></figure>
-<p>其中XmlToJsonProcessor是自定义的类，继承org.apache.camel.Processor，用于将xml数据转换成json。</p>
-<h2 id="4-规则引擎"><a href="#4-规则引擎" class="headerlink" title="4. 规则引擎"></a>4. 规则引擎</h2><p>你可以使用Spring Xml, Groovy这类DSL来定义route，这样无需修改代码，就能达到修改业务逻辑的目的。<br>例如上边的规则，</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">from(&quot;amqp:queue:order&quot;).to(&quot;uri:validateBean&quot;, &quot;uri:handleBean&quot;, &quot;uri:emailBean&quot;);</span><br></pre></td></tr></table></figure>
-<p>使用Spring Xml定义如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;route&gt;</span><br><span class="line">        &lt;from uri=&quot;amqp:queue:order&quot;/&gt;</span><br><span class="line">        &lt;multicast&gt;</span><br><span class="line">            &lt;to uri=&quot;uri:validateBean&quot;/&gt;</span><br><span class="line">            &lt;to uri=&quot;uri:handleBean&quot;/&gt;</span><br><span class="line">            &lt;to uri=&quot;uri:emailBean&quot;/&gt;</span><br><span class="line">        &lt;/multicast&gt;</span><br><span class="line">&lt;/route&gt;</span><br></pre></td></tr></table></figure>
-
-<p>如果需要在处理完订单后添加日志，可以改称如下规则</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;route&gt;</span><br><span class="line">        &lt;from uri=&quot;amqp:queue:order&quot;/&gt;</span><br><span class="line">        &lt;multicast&gt;</span><br><span class="line">            &lt;to uri=&quot;uri:validateBean&quot;/&gt;</span><br><span class="line">            &lt;to uri=&quot;uri:handleBean&quot;/&gt;</span><br><span class="line">            &lt;to uri=&quot;log:com.mycompany.log?level=INFO&quot;/&gt;</span><br><span class="line">            &lt;to uri=&quot;uri:emailBean&quot;/&gt;</span><br><span class="line">        &lt;/multicast&gt;</span><br><span class="line">&lt;/route&gt;</span><br></pre></td></tr></table></figure>
-<p>另外camel提供了大量的内置Processor，用于逻辑运算，过滤等，这样更加容易定移除灵活的route，例如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">from(&quot;amqp:queue:order&quot;)</span><br><span class="line">    .filter(header(&quot;foo&quot;).isEqualTo(&quot;bar&quot;))</span><br><span class="line">    .choice()</span><br><span class="line">    .when(xpath(&quot;/person/city = &amp;#39;London&amp;#39;&quot;))</span><br><span class="line">        .to(&quot;file:target/messages/uk&quot;)</span><br><span class="line">    .otherwise()</span><br><span class="line">        .to(&quot;file:target/messages/others&quot;);</span><br></pre></td></tr></table></figure>
-<p>这条规则先对订单进行过滤，只处理header中foo的值为bar的订单，然后根据用户的城市进行将订单传给不同的endpoint。<br>Apache Camel的应用场景有很多，这里只是大致列举了几种。</p>
-<p>END</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://awenshizheyu.github.io/miracle/2019/11/19/ApacheCamel-03-UseCase/" data-id="ck35hwf510003i3mt6vkh7x65" class="article-share-link">Share</a>
+      <a data-url="https://awenshizheyu.github.io/miracle/2019/11/19/ApacheCamel-05-QuickStart-HelloWorld/" data-id="ck35i1hjh0005ommta9l75k2l" class="article-share-link">Share</a>
       
       
     </footer>
@@ -419,7 +419,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/miracle/categories/Apache-Camel-%E7%B3%BB%E5%88%97%E6%96%87%E7%AB%A0/">Apache Camel 系列文章</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/miracle/categories/ApacheCamel%E7%B3%BB%E5%88%97%E6%96%87%E7%AB%A0/">ApacheCamel系列文章</a></li></ul>
     </div>
   </div>
 
@@ -447,23 +447,23 @@
       <ul>
         
           <li>
-            <a href="/miracle/2019/11/19/ApacheCamel-06-Componet-File/">06 - Apache Camel 系列文章 -组件-File</a>
+            <a href="/miracle/2019/11/19/ApacheCamel-06-Componet-File/">06-ApacheCamel系列文章-Component-File</a>
           </li>
         
           <li>
-            <a href="/miracle/2019/11/19/ApacheCamel-05-QuickStart-HelloWorld/">05 - Apache Camel 系列文章 -- 快速入门（HelloWorld）</a>
+            <a href="/miracle/2019/11/19/ApacheCamel-01-introduction/">01-ApacheCamel系列文章-简介</a>
           </li>
         
           <li>
-            <a href="/miracle/2019/11/19/ApacheCamel-01-introduction/">01 - Apache Camel 系列文章 -- 简介</a>
+            <a href="/miracle/2019/11/19/ApacheCamel-02-MajorFunction/">02-ApacheCamel系列文章-主要功能</a>
           </li>
         
           <li>
-            <a href="/miracle/2019/11/19/ApacheCamel-02-MajorFunction/">02 - Apache Camel 系列文章 -- 主要功能</a>
+            <a href="/miracle/2019/11/19/ApacheCamel-03-UseCase/">03-ApacheCamel系列文章-使用场景</a>
           </li>
         
           <li>
-            <a href="/miracle/2019/11/19/ApacheCamel-04-Concepts/">04 - Apache Camel 系列文章 -- 重要概念</a>
+            <a href="/miracle/2019/11/19/ApacheCamel-04-Concepts/">04-ApacheCamel系列文章-重要概念</a>
           </li>
         
       </ul>
