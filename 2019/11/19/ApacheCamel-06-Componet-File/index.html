@@ -7,17 +7,15 @@
   
   <title>06-ApacheCamel系列文章-Component-File | 爱减肥的阿文</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="上面一篇文章，我们通过HelloWord的例子，完成了ApacheCamel的入门，其实，就是使用了简单的File组件，本文，我们会深入File组件，看看他还有哪些强大的功能。  END">
+  <meta name="description" content="上面一篇文章，我们通过HelloWord的例子，完成了ApacheCamel的入门，其实，就是使用了简单的File组件，本文，我们会深入File组件，看看他还有哪些强大的功能。 定义File组件提供对文件系统的访问，允许任何其他Camel组件处理文件或将其他组件的消息保存到磁盘。 URI格式123file:directoryName[?options]orfile:&#x2F;&#x2F;directoryName[">
 <meta property="og:type" content="article">
 <meta property="og:title" content="06-ApacheCamel系列文章-Component-File">
 <meta property="og:url" content="https:&#x2F;&#x2F;awenshizheyu.github.io&#x2F;miracle&#x2F;2019&#x2F;11&#x2F;19&#x2F;ApacheCamel-06-Componet-File&#x2F;index.html">
 <meta property="og:site_name" content="爱减肥的阿文">
-<meta property="og:description" content="上面一篇文章，我们通过HelloWord的例子，完成了ApacheCamel的入门，其实，就是使用了简单的File组件，本文，我们会深入File组件，看看他还有哪些强大的功能。  END">
+<meta property="og:description" content="上面一篇文章，我们通过HelloWord的例子，完成了ApacheCamel的入门，其实，就是使用了简单的File组件，本文，我们会深入File组件，看看他还有哪些强大的功能。 定义File组件提供对文件系统的访问，允许任何其他Camel组件处理文件或将其他组件的消息保存到磁盘。 URI格式123file:directoryName[?options]orfile:&#x2F;&#x2F;directoryName[">
 <meta property="og:locale" content="zh">
-<meta property="og:image" content="https:&#x2F;&#x2F;awenshizheyu.github.io&#x2F;miracle&#x2F;2019&#x2F;11&#x2F;19&#x2F;ApacheCamel-06-Componet-File&#x2F;ddd.png">
-<meta property="og:updated_time" content="2019-11-19T06:50:52.000Z">
+<meta property="og:updated_time" content="2019-11-19T11:30:26.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https:&#x2F;&#x2F;awenshizheyu.github.io&#x2F;miracle&#x2F;2019&#x2F;11&#x2F;19&#x2F;ApacheCamel-06-Componet-File&#x2F;ddd.png">
   
     <link rel="alternate" href="/miracle/atom.xml" title="爱减肥的阿文" type="application/atom+xml">
   
@@ -67,7 +65,7 @@
         <section id="main"><article id="post-ApacheCamel-06-Componet-File" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/miracle/2019/11/19/ApacheCamel-06-Componet-File/" class="article-date">
-  <time datetime="2019-11-19T06:50:52.000Z" itemprop="datePublished">2019-11-19</time>
+  <time datetime="2019-11-19T11:30:26.000Z" itemprop="datePublished">2019-11-19</time>
 </a>
     
   <div class="article-category">
@@ -91,13 +89,21 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>上面一篇文章，我们通过HelloWord的例子，完成了ApacheCamel的入门，其实，就是使用了简单的File组件，本文，我们会深入File组件，看看他还有哪些强大的功能。</p>
-<p><img src="ddd.png" alt=""></p>
+<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>File组件提供对文件系统的访问，允许任何其他Camel组件处理文件或将其他组件的消息保存到磁盘。</p>
+<h2 id="URI格式"><a href="#URI格式" class="headerlink" title="URI格式"></a>URI格式</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">file:directoryName[?options]</span><br><span class="line">or</span><br><span class="line">file://directoryName[?options]</span><br></pre></td></tr></table></figure>
+<p>需要注意的是这里的 directoryName 是一个文件夹的目录，只能是一个目录，<br>如果只想使用单个文件，则可以使用fileName选项，例如通过设置fileName=thefilename。<br>此外，起始目录不得包含具有$ {}占位符的动态表达式，再次使用fileName选项来指定文件名的动态部分。<br>避免读取当前正在被其他应用程序写入的文件。</p>
+<h2 id="options选项"><a href="#options选项" class="headerlink" title="options选项"></a>options选项</h2><h3 id="autoCreate"><a href="#autoCreate" class="headerlink" title="autoCreate"></a>autoCreate</h3><h4 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h4><p>自动创建</p>
+<h4 id="默认"><a href="#默认" class="headerlink" title="默认"></a>默认</h4><p>true</p>
+<h4 id="解释"><a href="#解释" class="headerlink" title="解释"></a>解释</h4><p>在文件的路径名中自动创建缺少的目录。 对于文件使用者来说，这意味着要创建起始目录。 对于文件生产者来说，这意味着文件应该被写入的目录。<br>(针对消费者而言，实际测试时发现，不加该参数，camel也会自动创建目录)</p>
+<h3 id="bufferSize"><a href="#bufferSize" class="headerlink" title="bufferSize"></a>bufferSize</h3><h4 id="作用-1"><a href="#作用-1" class="headerlink" title="作用"></a>作用</h4><p>缓冲区大小</p>
+<h4 id="默认-1"><a href="#默认-1" class="headerlink" title="默认"></a>默认</h4><p>128kb</p>
+<h4 id="解释-1"><a href="#解释-1" class="headerlink" title="解释"></a>解释</h4><p>写缓冲区大小以字节为单位</p>
 <p>END</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://awenshizheyu.github.io/miracle/2019/11/19/ApacheCamel-06-Componet-File/" data-id="ck35i4ki00007swmtcp1b75s1" class="article-share-link">Share</a>
+      <a data-url="https://awenshizheyu.github.io/miracle/2019/11/19/ApacheCamel-06-Componet-File/" data-id="ck35s0x5j000742mtd5c4260s" class="article-share-link">Share</a>
       
       
     </footer>
